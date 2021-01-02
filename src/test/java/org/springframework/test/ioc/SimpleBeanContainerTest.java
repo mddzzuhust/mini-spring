@@ -14,6 +14,7 @@ public class SimpleBeanContainerTest {
 	@Test
 	public void testGetBean() throws Exception {
 		BeanFactory beanFactory = new BeanFactory();
+		
 		beanFactory.registerBean("helloService", new HelloService());
 		HelloService helloService = (HelloService) beanFactory.getBean("helloService");
 		assertThat(helloService).isNotNull();
